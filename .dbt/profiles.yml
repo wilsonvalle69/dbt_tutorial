@@ -1,3 +1,11 @@
+# ========================================================#
+# File Location -> C:\Users\wilsonvalle\.dbt
+# This one is not being used
+# Otherwise the excutions command should be 
+# dbt run --profiles-dir .\.dbt
+# ========================================================#
+
+
 cicd_project: # this needs to match the profile: in your dbt_project.yml file
   target: dev
   outputs:

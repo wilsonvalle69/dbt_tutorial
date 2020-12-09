@@ -1,15 +1,10 @@
+{{ config(materialized='table') }}
+
 with department as (
-    select id,
-        name 
-    from aa_department
+    select * from {{ ref('department') }}
 ),
 employee as (
-    select id, 
-        name, 
-        dob,
-        department_id,
-        country
-    from aa_employee
+    select * from {{ ref('employee') }}
 ),
 final as (
     select 

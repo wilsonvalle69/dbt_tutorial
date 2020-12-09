@@ -4,10 +4,17 @@ Welcome to your new dbt project!
 
 Try running the following commands:
 - dbt run
+- dbt run --profiles-dir .\\.dbt
 - dbt test
 - dbt debug
 - dbt debug --config-dir
 - dbt -debug --profiles-dir .\\.dbt
+
+Execute just one or multiple module 
+```
+$ dbt run --models employee
+$ dbt run --models employee department
+```
 
 
 ### Resources:
