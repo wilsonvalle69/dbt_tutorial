@@ -3,7 +3,7 @@ version: 2
 
 models:
     - name: department
-      description: "A starter dbt model"
+      description: Department Model
       columns:
           - name: id
             description: "The primary key for this table"
@@ -12,10 +12,25 @@ models:
                 - not_null
 
     - name: employee
-      description: "A starter dbt model"
+      description: "{{ doc('employee') }}"
       columns:
           - name: id
             description: "The primary key for this table"
             tests:
                 - unique
                 - not_null
+          - name: department_id
+            description: Relationship betweenemployee and department tables
+            tests:
+              - not_null
+              - relationships:
+                  to: ref('department')
+                  field: id
+    - name: department_employee
+      description: "Department Employee Model"
+      columns:
+          - name: country
+            decription: Existing Countries
+            tests:
+              - accepted_values:
+                  values: ['Australia', 'Colombia', 'Malaysia', 'England', 'New Zealand', 'Others']          

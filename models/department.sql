@@ -1,3 +1,3 @@
 select id,
     name 
-from aa_department
+from CICD_DB.CICD_SCHEMA.AA_DEPARTMENT

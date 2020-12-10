@@ -6,6 +6,7 @@ Try running the following commands:
 - dbt run
 - dbt run --profiles-dir .\\.dbt
 - dbt test
+- dbt compile
 - dbt debug
 - dbt debug --config-dir
 - dbt -debug --profiles-dir .\\.dbt
@@ -16,6 +17,31 @@ $ dbt run --models employee
 $ dbt run --models employee department
 ```
 
+To clean created tables (materialized views)
+```
+$ dbt run --refresh-all
+```
+
+Run connected models
+```
+$ dbt run --models +department_employee
+```
+
+Run upstream models
+```
+$ dbt run --models department+
+```
+
+### Generate Documentation
+
+```
+$ dbt docs generate
+```
+
+Publish the docs
+```
+$dbt docs serve
+```
 
 ### Resources:
 - Learn more about dbt [in the docs](https://docs.getdbt.com/docs/introduction)

@@ -3,4 +3,4 @@ select id,
     dob,
     department_id,
     country
-from aa_employee
+from CICD_DB.CICD_SCHEMA.AA_EMPLOYEE
