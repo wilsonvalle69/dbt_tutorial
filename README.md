@@ -43,6 +43,12 @@ Publish the docs
 $dbt docs serve
 ```
 
+Adding data
+Add csv file to data folder and then execute 
+```
+$ dbt seed
+```
+
 ### Resources:
 - Learn more about dbt [in the docs](https://docs.getdbt.com/docs/introduction)
 - Check out [Discourse](https://discourse.getdbt.com/) for commonly asked questions and answers
